@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shift — Daily Word Puzzle</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #1a1917;
+      color: #f0ede8;
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .wordmark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+
+    .wordmark span {
+      color: #e8a020;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: #888580;
+      text-transform: uppercase;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      border: 1px solid rgba(240, 237, 232, 0.08);
+      padding: 32px;
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .card-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: #888580;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .card-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #c8c5c0;
+    }
+
+    .word-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 32px 0 8px;
+    }
+
+    .cells {
+      display: flex;
+      gap: 5px;
+    }
+
+    .cell {
+      width: 44px;
+      height: 44px;
+      background: #2a2825;
+      border: 1px solid rgba(240, 237, 232, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      color: #f0ede8;
+    }
+
+    .cell.amber {
+      background: #e8a020;
+      border-color: #e8a020;
+      color: #1a1917;
+    }
+
+    .dots {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: #888580;
+    }
+
+    .departure-labels {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: #888580;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8a020;
+      color: #1a1917;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0 24px;
+      height: 48px;
+      line-height: 48px;
+      text-decoration: none;
+      margin-bottom: 48px;
+    }
+
+    .badge:hover { opacity: 0.85; }
+
+    footer {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: #555250;
+      text-transform: uppercase;
+    }
+
+    footer a {
+      color: #555250;
+      text-decoration: none;
+    }
+
+    footer a:hover { color: #888580; }
+  </style>
+</head>
+<body>
+
+  <div class="wordmark">shift<span>.</span></div>
+  <div class="eyebrow">A daily word puzzle</div>
+
+  <div class="card">
+    <div class="card-label">How it works</div>
+    <div class="card-text">
+      Change one letter at a time to travel from the departure word to the arrival word. A new puzzle departs every day.
+    </div>
+
+    <div class="word-row">
+      <div class="cells">
+        <div class="cell">C</div>
+        <div class="cell">O</div>
+        <div class="cell">L</div>
+        <div class="cell">D</div>
+      </div>
+      <div class="dots">
+        <div class="dot" style="opacity:1"></div>
+        <div class="dot" style="opacity:0.6"></div>
+        <div class="dot" style="opacity:0.3"></div>
+      </div>
+      <div class="cells">
+        <div class="cell amber">W</div>
+        <div class="cell amber">A</div>
+        <div class="cell amber">R</div>
+        <div class="cell amber">M</div>
+      </div>
+    </div>
+    <div class="departure-labels">
+      <span>Departure</span>
+      <span>Arrival</span>
+    </div>
+  </div>
+
+  <a class="badge" href="#">Download on the App Store →</a>
+
+  <footer>
+    <a href="/privacy-policy">Privacy Policy</a>
+  </footer>
+
+</body>
+</html>
